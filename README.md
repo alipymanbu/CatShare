@@ -1,80 +1,25 @@
 # CatShare
-类原生 & 海外设备，现已加入互传联盟。
 
-Android 目前已不再支持非系统应用获取手机的 MAC 地址等无法重置的序列号，但由于各品牌的互传功能通常为系统应用，互传联盟协议将设备的 MAC 地址作为其认证信息的一部分。本应用提供以下方案获取 WiFi Direct P2P 接口 (p2p0) 的 MAC 地址：
+本仓库是「CatShare」的安卓版本获取入口，附使用资料索引。
 
-### MAC 地址获取方案（按优先级）
-1. **手动配置** - 在设置中手动输入设备的 MAC 地址，可使用命令获取：`adb shell ip addr show p2p0`
-**（设备待机和发起传输时 MAC 地址可能不同，需注意抓取发起传输时的 MAC 地址）**
-2. **系统权限** - 设备已授予 `android.permission.LOCAL_MAC_ADDRESS` 权限，例如 App 已由系统签名的情况。
-3. **Shizuku / Root** - 通过提升权限的方式自动获取
+## 安装文件资源（夸克网盘）
 
-### ⚠️ 已知事项
-- 部分 Samsung 设备的 WiFi Direct MAC 地址可能会周期性变动，该情况下手动配置无效
+> **CatShare 安装文件资源（夸克网盘）**：[https://pan.quark.cn/s/e9bd506b0421](https://pan.quark.cn/s/e9bd506b0421)
 
-本 App 的 GitHub Release 和 F-Droid 版本签名一致， F-Droid 版本可能相对滞后，可以任意选择。
+## 官方项目
 
-[<img src="https://f-droid.org/badge/get-it-on-zh-cn.png"
-    alt="Get it on F-Droid"
-    height="80">](https://f-droid.org/packages/moe.reimu.catshare)
-[<img src="https://www.openapk.net/images/openapk-badge.png"
-    alt="Get it on OpenAPK"
-    height="80">](https://www.openapk.net/catshare/moe.reimu.catshare/)
-[<img src="https://www.androidfreeware.net/images/androidfreeware-badge.png"
-    alt="Get it on Android Freeware"
-    height="80">](https://www.androidfreeware.net/download-catshare-apk.html)
+- 上游项目：[kmod-midori/CatShare](https://github.com/kmod-midori/CatShare)
 
-## 功能
-- [x] 蓝牙发现
-- [x] 文件接收
-- [x] 文件发送（需要正确配置 MAC 地址，可通过手动输入、系统权限或 Shizuku 获取）
-- [x] 文本传输（两侧均为 CatShare 时复制至剪贴板，接收方为其他设备时以文本文件形式发送） 
+## 更多资料
 
-## 支持设备（已测试）
-| 品牌        | 向该设备发送 | 从该设备接收            |
-| ----------- | ------------ | ----------------------- |
-| 小米        | Y            | Y                       |
-| OPPO/一加等 | Y            | Y，但发送端提示接收失败 |
-| vivo        | Y            | Y                       |
+- [下载与安装教程](https://github.com/alipymanbu/Android/blob/master/%E5%AE%98%E7%BD%91%E7%89%88APP%E4%B8%8B%E8%BD%BD/CatShare/%E4%B8%8B%E8%BD%BD%E4%B8%8E%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B.md)
+- [互传联盟是什么意思](https://github.com/alipymanbu/Android/blob/master/%E5%AE%98%E7%BD%91%E7%89%88APP%E4%B8%8B%E8%BD%BD/CatShare/%E4%BA%92%E4%BC%A0%E8%81%94%E7%9B%9F%E6%98%AF%E4%BB%80%E4%B9%88%E6%84%8F%E6%80%9D.md)
+- [开启Shizuku发送教程](https://github.com/alipymanbu/Android/blob/master/%E5%AE%98%E7%BD%91%E7%89%88APP%E4%B8%8B%E8%BD%BD/CatShare/%E5%BC%80%E5%90%AFShizuku%E5%8F%91%E9%80%81%E6%95%99%E7%A8%8B.md)
+- [接收文件操作步骤](https://github.com/alipymanbu/Android/blob/master/%E5%AE%98%E7%BD%91%E7%89%88APP%E4%B8%8B%E8%BD%BD/CatShare/%E6%8E%A5%E6%94%B6%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C%E6%AD%A5%E9%AA%A4.md)
+- [无线调试配对失败怎么办](https://github.com/alipymanbu/Android/blob/master/%E5%AE%98%E7%BD%91%E7%89%88APP%E4%B8%8B%E8%BD%BD/CatShare/%E6%97%A0%E7%BA%BF%E8%B0%83%E8%AF%95%E9%85%8D%E5%AF%B9%E5%A4%B1%E8%B4%A5%E6%80%8E%E4%B9%88%E5%8A%9E.md)
+- [连接失败排查方法](https://github.com/alipymanbu/Android/blob/master/%E5%AE%98%E7%BD%91%E7%89%88APP%E4%B8%8B%E8%BD%BD/CatShare/%E8%BF%9E%E6%8E%A5%E5%A4%B1%E8%B4%A5%E6%8E%92%E6%9F%A5%E6%96%B9%E6%B3%95.md)
+- [全部软件目录](https://github.com/alipymanbu/Android/blob/master/%E5%85%A8%E9%83%A8%E8%BD%AF%E4%BB%B6%E7%9B%AE%E5%BD%95.md)
 
-## 汇报问题
+---
 
-你可以在该项目的 issue 区汇报你在使用 CatShare 期间遇到的问题，尽量的，请附上 CatShare 的 adb logcat 日志。
-
-通过该命令获取 CatShare 的日志。
-<details>
-<summary>release(正式版)</summary>
-
-shell(linux)
-```shell
-adb logcat --pid $(adb shell pidof -s moe.reimu.catshare)
-```
-cmd(windows)
-```shell
-for /f "tokens=1" %i in ('adb shell pidof -s moe.reimu.catshare') do adb logcat --pid %i
-```
-</details>
-<details>
-<summary>debug(测试版)</summary>
-
-shell(linux)
-```shell
-adb logcat --pid $(adb shell pidof -s moe.reimu.catshare.debug)
-```
-cmd(windows)
-```shell
-for /f "tokens=1" %i in ('adb shell pidof -s moe.reimu.catshare.debug') do adb logcat --pid %i
-```
-</details>
-建议尽可能完整的截取日志，并注释从什么时候发送或接收内容，尽量使用折叠块语法来包裹日志内容。
-
-````markdown
-<details>
-<summary>Details</summary>
-
-```
-在此处填入日志内容，注意其应被包裹在反括号代码块内
-```
-
-</details>
-````
+> 本仓库由上游项目 fork 而来，原始说明见[上游仓库](https://github.com/kmod-midori/CatShare)。
